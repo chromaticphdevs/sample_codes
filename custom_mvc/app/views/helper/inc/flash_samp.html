@@ -1,0 +1,18 @@
+
+<div>
+	<?php
+		Flash::set('Alert Message Primary' , 'primary' , 'primary');
+		Flash::set('Alert Message Warning' , 'warning' , 'warning');
+		Flash::set('Alert Message Danger' , 'danger' , 'danger');
+		Flash::set('Alert Message Info' , 'info' , 'info');
+	?>
+</div>
+
+<div>
+
+	##Use Flash
+	<?php Flash::show('primary')?>
+	<?php Flash::show('warning')?>
+	<?php Flash::show('danger')?>
+	<?php Flash::show('info')?>
+</div>

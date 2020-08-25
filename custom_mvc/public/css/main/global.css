@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+textarea{
+  min-height: 400px;
+
+  background: #1a1a2e;
+
+  color :#e94560;
+  font-weight: bold;
+
+  font-family: 'Ubuntu', 'Verdana', sans-serif , monospace;
+}

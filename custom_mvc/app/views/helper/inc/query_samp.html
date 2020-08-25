@@ -1,0 +1,45 @@
+
+<?php
+	
+	##GET
+	$this->modelName->get($id);
+
+	##ALL
+	$this->modelName->all();
+
+	##STORE
+	$this->modelName->store([
+		'fieldName' => $value,
+		'fieldName' => $value,
+		'fieldName' => $value,
+	]);
+
+	##UPDATE
+	$this->modelName->get([
+		'fieldName' => $value,
+		'fieldNameOther' => $value
+	], $id);
+
+	##DELETE
+	$this->modelName->delete($id);
+
+
+	##GET WITH PARAMETER (INSIDE MODEL)
+	$parameter = [
+		$this->table,
+		'*',
+		" brand = 'jaguar' and 'model' => '1978' "
+	];
+
+	$this->dbHelper->single(...$parameter);
+
+
+	##ALL WITH PARAMETER (INSIDE MODEL)
+	$parameter = [
+		$this->table,
+		'*',
+		" brand = 'jaguar' and 'model' => '1978' "
+	];
+	
+	$this->dbHelper->resultSet(...$parameter);
+?>

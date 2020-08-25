@@ -1,0 +1,22 @@
+
+<?php 	
+	$res = csrfValidate();
+
+	/*
+	*FUNCTION FILE ON functions/upload.php
+	*/
+	$imageUpload = upload_image('image' , $this->uploadPath);
+
+	/*Check Status*/
+
+	if(!isEqual($imageUpload['status'] , 'success')) {
+		Flash::set("{$imageUpload['result']['err']}" , 'danger');
+		request()->return();
+	}
+
+	$data = [
+		'uploadedImage' => $imageUpload['result'],
+		'savedPath'     => $this->savedPath
+	];
+
+	return $this->view('image/store' , $data);
